@@ -1,6 +1,6 @@
 # Funding History Hub
 
-A lightweight landing page that links to crypto funding rate tools built by [Wirewave](https://github.com/wirewave). 
+A lightweight landing page that links to crypto funding rate tools built by [wirewave](https://github.com/wirewave). 
 
 ## Tools Available
 
