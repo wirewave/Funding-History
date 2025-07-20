@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Funding History</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --subtext: #64748b;
+      --btn-text: #ffffff;
+
+      --binance-bg: #f3ba2f;
+      --binance-hover: #d4a728;
+
+      --hyperliquid-bg: #194d44;
+      --hyperliquid-hover: #0f2e29;
+    }
+
+    body.dark {
+      --bg: #0f0f0f;
+      --text: #f8fafc;
+      --subtext: #94a3b8;
+      --btn-text: #ffffff;
+
+      --binance-bg: #d4a728;
+      --binance-hover: #f3ba2f;
+
+      --hyperliquid-bg: #194d44;
+      --hyperliquid-hover: #2a8274;
+    }
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      color: var(--subtext);
+      margin-bottom: 3rem;
+    }
+
+    .button-list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1.25rem;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .tool-button {
+      display: block;
+      width: 100%;
+      padding: 1.15rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--btn-text);
+      text-align: center;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: all 0.25s ease;
+    }
+
+    .tool-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .binance {
+      background-color: var(--binance-bg);
+    }
+
+    .binance:hover {
+      background-color: var(--binance-hover);
+    }
+
+    .hyperliquid {
+      background-color: var(--hyperliquid-bg);
+    }
+
+    .hyperliquid:hover {
+      background-color: var(--hyperliquid-hover);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      user-select: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      p.subtitle {
+        font-size: 1rem;
+      }
+
+      .tool-button {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</div>
+  <div class="wrapper">
+    <h1>Funding History</h1>
+    <p class="subtitle">Built by wirewave</p>
+
+    <div class="button-list">
+      <a href="https://wirewave.github.io/Hyperliquid-Funding-History/" class="tool-button hyperliquid">
+        Hyperliquid
+      </a>
+      <a href="https://wirewave.github.io/Binance-Funding-History/" class="tool-button binance">
+        Binance
+      </a>
+    </div>
+  </div>
+
+  <script>
+      // Toggle theme between light and dark, persist choice, update toggle icon and reload data
+      function toggleTheme() {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        document.getElementById('themeToggle').textContent = isDark ? '☀️' : '🌙';
+        if (fundingChart) {
+          loadFundingData('custom');
+        }
+      }
+
+    window.onload = async () => {
+        // Apply saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+          document.body.classList.add('dark');
+          document.getElementById('themeToggle').textContent = '☀️';
+        }
+        };
+  </script>
+</body>
+</html>
