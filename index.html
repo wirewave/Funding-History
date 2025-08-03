@@ -12,11 +12,16 @@
       --subtext: #64748b;
       --btn-text: #ffffff;
 
+      --hyperliquid-bg: #194d44;
+      --hyperliquid-hover: #0f2e29;
+
+      --lighter-bg: #000000;
+      --lighter-hover: #393939;
+      --lighter-text: #ffffff;
+
       --binance-bg: #f3ba2f;
       --binance-hover: #d4a728;
 
-      --hyperliquid-bg: #194d44;
-      --hyperliquid-hover: #0f2e29;
     }
 
     body.dark {
@@ -25,11 +30,14 @@
       --subtext: #94a3b8;
       --btn-text: #ffffff;
 
-      --binance-bg: #d4a728;
-      --binance-hover: #f3ba2f;
-
       --hyperliquid-bg: #194d44;
       --hyperliquid-hover: #2a8274;
+
+      --lighter-bg: #242424;
+      --lighter-hover: #484848;
+
+      --binance-bg: #d4a728;
+      --binance-hover: #f3ba2f;
     }
 
     * {
@@ -96,20 +104,28 @@
       transform: translateY(-2px);
     }
 
-    .binance {
-      background-color: var(--binance-bg);
-    }
-
-    .binance:hover {
-      background-color: var(--binance-hover);
-    }
-
     .hyperliquid {
       background-color: var(--hyperliquid-bg);
     }
 
     .hyperliquid:hover {
       background-color: var(--hyperliquid-hover);
+    }
+
+    .lighter {
+      background-color: var(--lighter-bg);
+    }
+
+    .lighter:hover {
+      background-color: var(--lighter-hover);
+    }
+
+    .binance {
+      background-color: var(--binance-bg);
+    }
+
+    .binance:hover {
+      background-color: var(--binance-hover);
     }
 
     .theme-toggle {
@@ -151,6 +167,9 @@
     <div class="button-list">
       <a href="https://wirewave.github.io/Hyperliquid-Funding-History/" class="tool-button hyperliquid">
         Hyperliquid
+      </a>
+      <a href="https://wirewave.github.io/Lighter-Funding-History/" class="tool-button lighter">
+        Lighter
       </a>
       <a href="https://wirewave.github.io/Binance-Funding-History/" class="tool-button binance">
         Binance
