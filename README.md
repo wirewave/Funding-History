@@ -5,6 +5,7 @@ A lightweight landing page that links to crypto funding rate tools built by [Wir
 ## Tools Available
 
 - [Hyperliquid Funding History](https://wirewave.github.io/Hyperliquid-Funding-History/)
+- [Lighter Funding History](https://wirewave.github.io/Lighter-Funding-History/)
 - [Binance Funding History](https://wirewave.github.io/Binance-Funding-History/)
 
 ## Usage
