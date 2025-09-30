@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Funding History</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -69,6 +70,12 @@
       max-width: 600px;
       margin: 0 auto;
       text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 5px;
+      font-size: 14px;
     }
 
     h1 {
@@ -192,6 +199,35 @@
       </a>
     </div>
   </div>
+
+  <footer>
+    <h2><u>Support This Project</u></h2>
+    <br>
+    <div>
+      <strong>BITCOIN:</strong>
+      <code id="btc-address">bc1qqhqvz93k52t67chdkclcny0f2dwynsqnjlw05h</code>
+      <button onclick="navigator.clipboard.writeText(document.getElementById('btc-address').innerText)"
+              style="background:none; border:none; cursor:pointer; color:var(--text); vertical-align:middle;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 
+                  2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div>
+      <strong>ERC-20:</strong>
+      <code id="eth-address">0xdd88ea9c0ed6361e12753894b8621a40b1a41dd0</code>
+      <button onclick="navigator.clipboard.writeText(document.getElementById('eth-address').innerText)"
+              style="background:none; border:none; cursor:pointer; color:var(--text); vertical-align:middle;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 
+                  2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
 
   <script>
       // Toggle theme between light and dark, persist choice, update toggle icon and reload data
